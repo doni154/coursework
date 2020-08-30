@@ -1,0 +1,77 @@
+import time
+import random
+
+
+def askUser():
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+    checkPass(username, password)
+
+
+def checkPass(username, password):
+    if username == "bob1" and password == "dan2":
+        login(username)
+    else:
+        print ("Your username and/or password was incorrect")
+        askUser()
+
+def login(user):
+    print ("Welcome " + user)
+    print ("You have successfully logged in!")
+    askCom()
+
+
+def askCom():
+    command = input("Enter your command: ")
+    if command == "log off" or command == "quit":
+        username = ""
+        password = ""
+        print ("You have logged off")
+        askUser()
+    else:
+        print ("Unknown command")
+        askCom()
+
+min = 1
+max = 6
+score = 0
+roll = "yes"
+answer = "no"
+
+input("will you roll the dice?")
+while roll == "yes" or roll == "y" :
+     print("rolling...")
+     dice1 = (random.randint(min,max))
+     print (dice1)
+     time.sleep(1)
+     dice2 = (random.randint(min,max))
+     print (dice2)
+     time.sleep(1)
+     total1 = dice1 + dice2
+     score = (score + total1)
+    if total1 == 1 or total == 3 or total == 5 or total == 7 or total == 9
+        score = (score +5)
+     else:
+       total1 == 2 or total == 4 or total == 6 or total == 8 or total == 10 or total == 12
+        score = (score +10)
+     print ("your score is, score")
+     input ("would you like a seccond go?")
+     print ("another round will start again shortly")
+     dice3 = (random.randint(min,max))
+     print (dice3)
+     time.sleep(1) 
+     dice4 = (random.randint(min,max))
+     print (dice4)
+     time.sleep(1)
+     total2 = dice3 + dice4 
+     score = (score + total2)
+     if total == 1 or total == 3 or total == 5 or total == 7 or total == 9 or total == 11
+        score = (score +5)
+     else:
+        total 2 == 2 or 4 or 6 or 8 or 10 or 12
+        score == (score +10)
+     print ("your score is, score")
+     input ("would you like a third go?")
+     print("another round will start shortly")
+   
+      
